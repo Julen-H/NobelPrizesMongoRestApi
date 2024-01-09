@@ -9,4 +9,8 @@ This is the link: https://github.com/jdorfman/awesome-json-datasets?tab=readme-o
 
 As mentioned before the dataset was originally taken as a JSON document. Before the dataset was imported to a MongoDB database it suffered a small change on the structure. The Nobel Prizes were inside an array, having this structure and importing to MongoDB we got as a result a single document inside our collection. Inside that array they were 670 prizes but importing in this way makes no sense, so the array was deleted and in that way Mongo could import each prize as a single document. Before starting making the import is compulsory to create a new connnection to our MongoDB server. In this case we configured a connection to the localhost using this connection string: mongodb:/localhost.
 
+## Rest Service
 
+|Type|Endpoint|Result|
+|----|--------|------|
+|GET |        |      |
