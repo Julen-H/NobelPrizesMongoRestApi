@@ -14,3 +14,10 @@ As mentioned before the dataset was originally taken as a JSON document. Before 
 |Type|Endpoint|Result|
 |----|--------|------|
 |GET |        |      |
+|GET |        |      |
+|GET |        |      |
+|POST |        |      |
+|PUT |        |      |
+|DELETE |        |      |
+|DELETE |        |      |
+|DELETE |        |      |
