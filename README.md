@@ -25,7 +25,7 @@ The Rest service has a particular structure. Using this service the user can mak
 |GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
 |POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
-|DELETE |/nobel/sariaezabatuid/{_id}|RESPONSE OF THE HTTPREQUEST STATUS CODE:<br> connection: keep-alive<br>content-length: 0<br>date: Wed,10 Jan 2024 15:17:58 GMT<br>keep-alive: timeout=60<br> FROM TERMINAL:<br> Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
+|DELETE |/nobel/sariaezabatuid/{_id}|RESPONSE OF THE HTTPREQUEST STATUS CODE:<br><br>connection: keep-alive<br>content-length: 0<br>date: Wed,10 Jan 2024 15:17:58 GMT<br>keep-alive: timeout=60<br><br>FROM TERMINAL:<br><br>Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 |DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
 ## MongoDB
