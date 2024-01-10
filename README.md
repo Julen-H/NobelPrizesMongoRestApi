@@ -13,11 +13,13 @@ The dataset has a particular structure, each prize is a JSONObject but at the sa
 
 This is the link: https://github.com/jdorfman/awesome-json-datasets?tab=readme-ov-file
 
-As mentioned before the dataset was originally taken as a JSON document. Before the dataset was imported to a MongoDB database it suffered a small change on the structure. The Nobel Prizes were inside an array, having this structure and importing to MongoDB we got as a result a single document inside our collection. Inside that array they were 670 prizes but importing in this way makes no sense, so the array was deleted and in that way Mongo could import each prize as a single document. Before starting making the import is compulsory to create a new connnection to our MongoDB server. In this case we configured a connection to the localhost using this connection string: mongodb:/localhost.
+As mentioned before the dataset was originally taken as a JSON document. Before the dataset was imported to a MongoDB database it suffered a small change on the structure. The Nobel Prizes were inside an array, having this structure and importing to MongoDB we got as a result a single document inside our collection. Inside that array they were 670 prizes but importing in this way makes no sense, so the array was deleted and in that way Mongo could import each prize as a single document. Before starting making the import is compulsory to create a new connnection to our MongoDB server. In this case we configured a connection to the localhost using this connection string: mongodb://localhost.
 
 ## Rest Service
 
-The Rest service has a particular structure. Using this service the user can make different types of request, 
+The Rest service has a particular structure. Using this service the user can make different types of request, those types are the same that a CRUD app makes; create(POST), read(GET), update(PUT) and delete(DELETE). Each endpoint manages a different type of request, thats why depending which one is going to be executed the service will do one type of operation or another. The request can be made using the Swagger user interface or another development environment as Imsomnia or Postman. From Swagger you can access the different endpoints, see the model schemas and get the api doc in yaml format. This is an overview:
+
+
 
 |Type|Endpoint|Result|
 |----|--------|------|
