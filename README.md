@@ -17,7 +17,7 @@ The Rest service has a particular structure. Using this service the user can mak
    - /nobel/sariguztiak
    - /nobel/sariabilatu
    - /nobel/bilatuKategoriaUrteka
-3. DELETE Requests -> This 
+2. DELETE R
    - 
 5. POST Request
 6. PUT Request
