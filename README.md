@@ -11,6 +11,17 @@ As mentioned before the dataset was originally taken as a JSON document. Before 
 
 ## Rest Service
 
+The Rest service has a particular structure. Using this service the user can make different types of request, 
+
+1. GET Requests -> This type of request is used to extract or select data from a database
+   - /nobel/sariguztiak
+   - /nobel/sariabilatu
+   - /nobel/bilatuKategoriaUrteka
+3. DELETE Requests -> This 
+   - 
+5. POST Request
+6. PUT Request
+
 |Type|Endpoint|Result|
 |----|--------|------|
 |GET |/nobel/sariguztiak| This returns all the Prizes is JSON format|
