@@ -13,11 +13,11 @@ As mentioned before the dataset was originally taken as a JSON document. Before 
 
 |Type|Endpoint|Result|
 |----|--------|------|
-|GET |/nobel/sariguztiak| This returns all the Prizes is JSON format      |
-|GET |        |      |
-|GET |        |      |
-|POST |        |      |
-|PUT |        |      |
-|DELETE |        |      |
-|DELETE |        |      |
-|DELETE |        |      |
+|GET |/nobel/sariguztiak| This returns all the Prizes is JSON format|
+|GET |/nobel/sariabilatu| This returns the Prize that matches the passed parameter|
+|GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
+|POST |/nobel/sariberria|     |
+|PUT |/nobel/sariaeditatu/{_id}|      |
+|DELETE |/nobel/sariaezabatuid/{_id}|      |
+|DELETE |/nobel/sariaezabatu|      |
+
