@@ -21,5 +21,5 @@ The Rest service has a particular structure. Using this service the user can mak
 |POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
 |DELETE |/nobel/sariaezabatuid/{_id}|      |
-|DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da"  Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
+|DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
