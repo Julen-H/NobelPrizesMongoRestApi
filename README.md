@@ -6,6 +6,7 @@ This project has been developed for the Data Access subject of the second course
 - MongoDB connection String: mongodb://localhost
 - Database name: nobelprize
 - Collection name: prizes
+- Maven execution command (same directory as pom.xml): mvn spring-boot:run
 
 ## Dataset and MongoDB
 The dataset has a particular structure, each prize is a JSONObject but at the same time this prizes have three main attributes; two Strings and an JSONObject Array. The main idea was to deal with a certain level of depth in our datasets avoiding picking plain datasets. The dataset selected for the project was picked from a collection of datasets located in GitHub. 
@@ -25,8 +26,8 @@ The Rest service has a particular structure. Using this service the user can mak
 |GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
 |POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
-|DELETE |/nobel/sariaezabatuid/{_id}|RESPONSE OF THE HTTPREQUEST STATUS CODE:<br><br>connection: keep-alive<br>content-length: 0<br>date: Wed,10 Jan 2024 15:17:58 GMT<br>keep-alive: timeout=60<br>CODE: 200<br>Description: OK<br><br>FROM TERMINAL:<br><br>Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
-|DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
+|DELETE |/nobel/sariaezabatuid/{_id}|RESPONSE OF THE HTTPREQUEST STATUS CODE:<br><br>connection: keep-alive<br>content-length: 0<br>date: Wed,10 Jan 2024 15:17:58 GMT<br>keep-alive: timeout=60<br>CODE: 200<br>Description: OK<br><br>FROM TERMINAL:<br><br>Successful case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
+|DELETE |/nobel/sariaezabatu|Successful case: "Nobel Saria era egokian ezabatu da"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
 ## MongoDB
 
