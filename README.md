@@ -13,22 +13,14 @@ As mentioned before the dataset was originally taken as a JSON document. Before 
 
 The Rest service has a particular structure. Using this service the user can make different types of request, 
 
-1. GET Requests -> This type of request is used to extract or select data from a database
-   - /nobel/sariguztiak
-   - /nobel/sariabilatu
-   - /nobel/bilatuKategoriaUrteka
-2. DELETE R
-   - 
-5. POST Request
-6. PUT Request
-
 |Type|Endpoint|Result|
 |----|--------|------|
 |GET |/nobel/sariguztiak| This returns all the Prizes is JSON format|
 |GET |/nobel/sariabilatu| This returns the Prize that matches the passed parameter|
 |GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
-|POST |/nobel/sariberria|     |
+|POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
 |DELETE |/nobel/sariaezabatuid/{_id}|      |
-|DELETE |/nobel/sariaezabatu|      |
+|DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" 
+Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
