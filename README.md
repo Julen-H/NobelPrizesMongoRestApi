@@ -15,11 +15,11 @@ The Rest service has a particular structure. Using this service the user can mak
 
 |Type|Endpoint|Result|
 |----|--------|------|
-|GET |/nobel/sariguztiak| This returns all the Prizes is JSON format|
+|GET |/nobel/sariguztiak| This returns all the Prizes in JSON format|
 |GET |/nobel/sariabilatu| This returns the Prize that matches the passed parameter|
 |GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
 |POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
-|DELETE |/nobel/sariaezabatuid/{_id}|      |
+|DELETE |/nobel/sariaezabatuid/{_id}|Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 |DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
