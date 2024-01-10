@@ -19,7 +19,7 @@ As mentioned before the dataset was originally taken as a JSON document. Before 
 
 The Rest service has a particular structure. Using this service the user can make different types of request, those types are the same that a CRUD app makes; create(POST), read(GET), update(PUT) and delete(DELETE). Each endpoint manages a different type of request, thats why depending which one is going to be executed the service will do one type of operation or another. The request can be made using the Swagger user interface or another development environment as Imsomnia or Postman. From Swagger you can access the different endpoints, see the model schemas and get the api doc in yaml format. This is an overview:
 
-
+<img src="media/swaggercapt.JPG" width=%40>
 
 |Type|Endpoint|Result|
 |----|--------|------|
