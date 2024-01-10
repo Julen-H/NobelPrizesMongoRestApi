@@ -1,6 +1,11 @@
 # NobelPrizesMongoRestApi by Julen Herrero
 
-This project has been developed for the Data Access subject of the second course of Development of Multiplatform Applications in Uni Eibar. The main task is to develop a Rest Api that access a MongoDB database and to learn how a Rest Api can fit in a web application. In this case a JSON dataset was selected and loaded in a MongoDB database. That dataset collects all the nobel prizes that were given in the last century. 
+This project has been developed for the Data Access subject of the second course of Development of Multiplatform Applications in Uni Eibar. The main task is to develop a Rest Api that access a MongoDB database and to learn how a Rest Api can fit in a web application. In this case a JSON dataset was selected and loaded in a MongoDB database. That dataset collects all the nobel prizes that were given in the last century. These are the general use steps to take into account:
+
+- Swagger access: http://localhost:8081/swagger-ui/index.html
+- MongoDB connection String: mongodb://localhost
+- Database name: nobelprize
+- Collection name: prizes
 
 ## Dataset and MongoDB
 The dataset has a particular structure, each prize is a JSONObject but at the same time this prizes have three main attributes; two Strings and an JSONObject Array. The main idea was to deal with a certain level of depth in our datasets avoiding picking plain datasets. The dataset selected for the project was picked from a collection of datasets located in GitHub. 
@@ -20,6 +25,10 @@ The Rest service has a particular structure. Using this service the user can mak
 |GET |/nobel/bilatuKategoriaUrteka|This returns the Prize that matches the passed parameters|
 |POST |/nobel/sariberria|"Nobel Saria era egokian gehitu da"|
 |PUT |/nobel/sariaeditatu/{_id}|      |
-|DELETE |/nobel/sariaezabatuid/{_id}|Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
+|DELETE |/nobel/sariaezabatuid/{_id}|FROM TERMINAL:<br> Successfull case: "Nobel Saria ezabatua izan da, ezabatutako kopurua: 1"<br>Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 |DELETE |/nobel/sariaezabatu|Successfull case: "Nobel Saria era egokian ezabatu da" / Failure case: "Errore bat gertatu da Nobel Saria ezabatzen, saiatu berriro mesedez..."|
 
+## MongoDB
+
+
+## Java Project
