@@ -35,3 +35,5 @@ The Rest service has a particular structure. Using this service the user can mak
 
 
 ## Java Project
+
+<img src="media/DiagramaRestApi.png" width=%40>
