@@ -6,7 +6,13 @@ import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
+ * Klase honetan sarien errepositorioaren funtzioak zehazten dira. Funtzio hauek
+ * beharrezkoak diren eragiketak izango lirateke (CRUD ereduaren eragiketak). 
+ * Funtzio hauek geroago Mongo errepositorioan implementatuko dira eta kontroladoretik
+ * ere deituko dira. Azkenik, klase hau interfaze moduan eraikitzen da geroago 
+ * beste klaseetan implementatu ahal izateko.
  * 
+ * @author Julen Herrero
  */
 @Repository
 public interface PrizeRepository {

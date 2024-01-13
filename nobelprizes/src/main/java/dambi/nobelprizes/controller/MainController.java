@@ -168,7 +168,7 @@ public class MainController {
      * @param laureates Sari hori jaso zuten pertsonen lista, Laureate motako objektuen lista bat izanik
      * @return String Saria era egokian gehitu delaren mezu bat String formatuan
      */
-    @PostMapping(value = "/sariberria/")
+    @PostMapping(value = "/sariberria")
     public @ResponseBody String sariBerriaGehitu(@RequestParam String year, @RequestParam String category,
             @RequestBody List<Laureate> laureates) {
 

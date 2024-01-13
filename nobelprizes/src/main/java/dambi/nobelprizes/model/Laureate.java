@@ -1,7 +1,7 @@
 package dambi.nobelprizes.model;
 
 /**
- * Klase hau Laureate motatako objektuaren klasea da. Laureate edo saritua sari
+ * Klase hau Laureate motako objektuaren modeloa da. Laureate edo saritua sari
  * baten oinarrizko elementu
  * bat da. Hala ere sari batek saritu bat baino gehiago izan dezake, beraz sari
  * baten laureates atributua
@@ -53,48 +53,18 @@ public class Laureate {
         this.share = share;
     }
 
-    /**
-     * Sarituaren identifikadorearen getter-a da funtzio hau. Honek String motako
-     * atributu bat bueltatzen
-     * du; kasu honetan sarituaren identifikadorea.
-     * 
-     * @return String
-     */
     public String getId() {
         return id;
     }
 
-    /**
-     * Sarituaren identifikadorearen setter-a da funtzio hau. Honek String motako
-     * parametro bat
-     * jasotzen du eta jaso duen identifikadorea erreferentzia egiten dion
-     * objektuaren
-     * identifikadorea izatera pasatzen dela zehazten dio.
-     * 
-     * @param id
-     */
     public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * Sarituaren izenaren getter-a da funtzio hau. Honek String motako
-     * parametro bat bueltatzen du; sarituaren izena.
-     * 
-     * @return String
-     */
     public String getFirstname() {
         return firstname;
     }
 
-    /**
-     * Sarituaren abizenaren getter-a da funtzio hau. Honek String motako
-     * parametro bat jasotzen du eta jaso duen parametroa erreferentzia egiten dion
-     * objektuaren
-     * izena izatera pasatzen dela zehazten dio.
-     * 
-     * @param firstname
-     */
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }

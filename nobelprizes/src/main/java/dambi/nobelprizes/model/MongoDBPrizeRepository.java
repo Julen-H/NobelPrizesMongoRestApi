@@ -34,12 +34,6 @@ import static com.mongodb.client.model.Filters.eq;
 @Repository
 public class MongoDBPrizeRepository implements PrizeRepository {
     
-    /*private static final TransactionOptions txnOptions = TransactionOptions.builder()
-                                                                           .readPreference(ReadPreference.primary())
-                                                                           .readConcern(ReadConcern.MAJORITY)
-                                                                           .writeConcern(WriteConcern.MAJORITY)
-                                                                           .build();*/
-
     private final MongoTemplate mongoTemplate; 
 
     @Autowired
@@ -54,7 +48,6 @@ public class MongoDBPrizeRepository implements PrizeRepository {
      * 
      * @param mongoTemplate MongoTemplate klaseko instantzia
      */
-    @Autowired
     public MongoDBPrizeRepository(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
     }
@@ -86,7 +79,7 @@ public class MongoDBPrizeRepository implements PrizeRepository {
      * filtroa pasatzen zaio, identifikadorea zehazki Mongo-k sariei ematen dio ObjectId-a da beraz 
      * filtroan zehaztu egiten da zein eremuri erreferentzia egiten dion.
      * 
-     * @return Prize 
+     * @return Prize Bilatu den saria
      */
     @Override
     public Prize findById(String id) {
@@ -108,7 +101,10 @@ public class MongoDBPrizeRepository implements PrizeRepository {
     }
 
     /**
-     * Funtzio honek pasatako parametroekin bat egiten duen saria topatzen 
+     * Funtzio honek pasatako parametroekin bat egiten duen saria topatzen du. Bi parametro jasotzen du funtzioak,
+     * saria banatu zen urtea eta kategoria. Query instantzia batean enkapsulatzen den Criteria instantzia baten
+     * bidez bi parametroak erabiliz kriterio bat sortzen da eta horrekin bat egiten duen saria bueltatzen du
+     * mongoTemplate-aren bidez.
      * 
      * @param year Saria banatu zen urtea String formatuan
      * @param category Sariaren kategoria String formatuan
@@ -122,6 +118,17 @@ public class MongoDBPrizeRepository implements PrizeRepository {
         return mongoTemplate.findOne(query, Prize.class);
     }
 
+    /**
+     * Funtzio honen bitartez paremtro bidez pasatako urtearekin eta kategoriarekin bat egiten duen 
+     * saria ezabatu daiteke. Horretarako Criteria eta Query instantziak erabiltzen dira, Criteria
+     * instantzia Query instantzia baten enkapsulatzen da eta Query hori kriterio moduan erabiltzen da,
+     * behin filtroa pasata ezabatu nahi den saria lortzen da eta ezbatu egiten da. Azkenik, funtzioak
+     * ezabatu diren sari kopurua bueltatzen du long formatuan.
+     * 
+     * @param year Saria banatu zen urtea String formatuan
+     * @param category Sariaren kategoria String formatuan
+     * @return long Ezabatu diren sari kopurua
+     */
     @Override
     public long deleteByYear(String year, String category) {
         Criteria criteria = Criteria.where("year").is(year).and("category").is(category);
@@ -130,6 +137,15 @@ public class MongoDBPrizeRepository implements PrizeRepository {
         return mongoTemplate.remove(query, Prize.class).getDeletedCount();
     }
 
+    /**
+     * Funtzio honek parametro bidez pasatzen den identifikadoreakin bat egiten duen saria ezabatzen
+     * du. Identifikadore hori Mongo datu basean sari bakoitzari ematen zaion ObjectId-a izango litzateke.
+     * Filtro bidez identifikadorea pasatzen da eta bat egiuten duen saria ezabatzen da. GetDeletedCount
+     * funtzioaren bitartez ezabatu den kopurua bueltatzen da.
+     * 
+     * @param String Ezabatu nahi den sariaren identifikadorea
+     * @return long Ezabatu den sari kopurua long formatuan
+     */
     @Override 
     public long delete(String _id) {
         return prizeCollection.deleteMany(eq("_id", new ObjectId(_id))).getDeletedCount();

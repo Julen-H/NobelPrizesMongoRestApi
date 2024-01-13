@@ -14,6 +14,15 @@ import com.mongodb.client.MongoClients;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
+/**
+ * Klase honen bitartez aplikazioaren eta Mongo-ren arteko konexioa eta BSON dokumentuen
+ * eta Java objektuen arteko konbertsioa egiten da. Klase honek, Configuration anotazioa
+ * erabiltzen du, eta atributu moduan, application.properties dokumentuan zehazten den 
+ * konexio string-a hartzen du. MongoClient funtzioan konbertsioa egiten da eta mongo-ren
+ * bezeroa bueltatzen da konexioa egiteko.
+ * 
+ * @author Julen Herrero
+ */
 @Configuration
 public class SpringConfiguration {
     
@@ -29,5 +38,6 @@ public class SpringConfiguration {
                                                       .codecRegistry(codecRegistry)
                                                       .build());
         //return MongoClients.create();
+
     }
 }
