@@ -33,7 +33,10 @@ The Rest service has a particular structure. Using this service the user can mak
 
 ## MongoDB
 
-This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDBCompass that is a the MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connection to a servers, to the local machine and even to the MongoDB cluster or the Cloud. Editing and adjusting that connection string will give you the possibility to connect be able to connect where you need. In this case the application is configured to connect to the local machine via Localhost. Entering mongodb://localhost you can connect and proceed to create the database. 
+This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDBCompass that is a the MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connection to a servers, to the local machine and even to the MongoDB cluster or the Cloud. 
+
+
+Editing and adjusting that connection string will give you the possibility to be able to connect where you need. In this case the application is configured to connect to the local machine via Localhost. Entering mongodb://localhost you can connect and proceed to create the database. 
 
 
 In the left side you can see the databases, there you create the database and the collection where the data is going to be kept. The name of the database is called nobelprize and the collection is called prizes. Once the database and the collection are created we import our dataset. The dataset is a JSON document, just importing the document mongo will create a large amount of documents. Each document is a nobel prizes and each prize has its own attributes:
@@ -42,11 +45,11 @@ In the left side you can see the databases, there you create the database and th
 - Category (String): The category of the prize
 - Laureates (List<Laureate> of laureates): List of the people that won the prize
 - Each Laureate has:
-1. id (String): Identificator of the winner
-2. firstname (String): The first name of the winner
-3. surname (String): The surname of the winner
-4. motivation (String): The contribution or the reason why he won the prize
-5. share (String): With how many people shared the prize
+  1. id (String): Identificator of the winner
+  2. firstname (String): The first name of the winner
+  3. surname (String): The surname of the winner
+  4. motivation (String): The contribution or the reason why he won the prize
+  5. share (String): With how many people shared the prize
 
 ## Java Project
 
