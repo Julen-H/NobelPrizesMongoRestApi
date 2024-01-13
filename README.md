@@ -33,15 +33,15 @@ The Rest service has a particular structure. Using this service the user can mak
 
 ## MongoDB
 
-This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDB Compass that is a MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connection to a servers, to the local machine and even to the MongoDB cluster or the Cloud. 
+This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDB Compass that is a MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connections to servers, to the local machine and even to the MongoDB cluster or the Cloud. 
 
 
 Editing and adjusting that connection string will give you the possibility to be able to connect where you need. In this case the application is configured to connect to the local machine via Localhost. Entering mongodb://localhost you can connect and proceed to create the database. 
 
 
-In the left side you can see the databases, there you create the database and the collection where the data is going to be kept. The name of the database is called nobelprize and the collection is called prizes. Once the database and the collection are created we import our dataset. The dataset is a JSON document, just importing the document mongo will create a large amount of documents. Each document is a nobel prizes and each prize has its own attributes:
+In the left side you can see the databases, there you create the database and the collection where the data is going to be kept. The name of the database is called nobelprize and the collection is called prizes. Once the database and the collection are created we import our dataset. The dataset is a JSON document, just importing the document mongo will create a large amount of documents. Each document is a nobel prize and each prize has its own attributes:
 
-- Year (String): The year where the prize was given
+- Year (String): The year when the prize was given
 - Category (String): The category of the prize
 - Laureates (List<Laureate> of laureates): List of the people that won the prize
 - Each Laureate has:
@@ -59,12 +59,13 @@ The Java Project has been developed creating a SpringBoot project. We are using 
 The SpringBoot type of projects have a particular structure of classes and models. The project is divided in two main packages; model and controller. Outside those packages we have two classes more. The first class is the SpringConfiguration. With this class the aplication can get the connection string from the application properties and get the MongoDB client creating at the same time the conversion from BSONDocument to JavaObject. And the second class is the Application main class. With this class the aplication gets started and runs the whole service.
 
 
-Inside the model package we can find different type of classes. The object models are one of those, with these models the application creates a mapping to structure the data and be able to process them in MongoDB. As we are working with a type of object where the object itself has an object inside we have to map also the subobject. In this case we have a Prize class and inside that Prize class we have as an attribute a List that contains a Laureate class objects. For that purpose the Laureate class has been developed also having its own atributes. Once these models are build the conversion from the JavaObjects and the Mongo documents can be made. Executing Swagger and scrolling down to the bottom we can see the schemas. 
+Inside the model package we can find different type of classes. The object models are one of those, with these models the application creates a mapping to structure the data and be able to process them in MongoDB. As we are working with a type of object where the object itself has an object inside we have to map also the subobject. In this case we have a Prize class and inside that Prize class we have as an attribute a List that can contain many Laureate class objects. For that purpose the Laureate class has been developed also having its own atributes. Once these models are build the conversion from the JavaObjects and the Mongo documents can be made. Executing Swagger and scrolling down to the bottom we can see the schemas. 
 
 
-Lefting the objects classes apart, we have two classes more that are the repositories. In those repositories we can collect the data and then manage them to execute operations. We have a interface where we declare the basic functions and then we have a MongoDB repository. This repository implements the functions declared in the repository interface. Thos functions are the basic operation that later the controller will use to create different type of requests.
+Lefting the objects classes apart, we have two classes more that are the repositories. In those repositories we can collect the data and then manage them to execute operations. We have a interface where we declare the basic functions and then we have a MongoDB repository. This repository implements the functions declared in the repository interface. Those functions are the basic operation that later the controller will use to create different type of requests.
 
 
 Finally, inside the controller package we have a single class. This class is the main controller where we create the different endpoints of the service and the main request mapping. This is the class diagram of the application:
+
 
 <img src="media/DiagramaRestApi.png" width=%40>
