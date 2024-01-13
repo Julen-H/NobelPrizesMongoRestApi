@@ -33,7 +33,7 @@ The Rest service has a particular structure. Using this service the user can mak
 
 ## MongoDB
 
-This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDBCompass that is a the MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connection to a servers, to the local machine and even to the MongoDB cluster or the Cloud. 
+This SpringBoot application is a service that creates request for a MongoDB database. For creating the database is neccesary to install the Community edition of MongoDB and MongoDB Compass that is a MongoDB client. Once installed we open the client and we create a connection to our local machine. Here you can create remote connection to a servers, to the local machine and even to the MongoDB cluster or the Cloud. 
 
 
 Editing and adjusting that connection string will give you the possibility to be able to connect where you need. In this case the application is configured to connect to the local machine via Localhost. Entering mongodb://localhost you can connect and proceed to create the database. 
